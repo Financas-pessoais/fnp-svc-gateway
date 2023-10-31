@@ -11,6 +11,7 @@
 	<groupId>io.github.fnp</groupId>
 	<artifactId>svc-gateway</artifactId>
 	<version>1.0</version>
+	<packaging>jar</packaging>
 	<name>Gateway</name>
 	<description>Gateway da aplicação</description>
 	<properties>
