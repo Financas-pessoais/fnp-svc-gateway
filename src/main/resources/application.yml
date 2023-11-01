@@ -14,11 +14,11 @@ server:
 spring:
   application:
     name: SVC-GATEWAY
-  config:
-    import: configserver:${URL_CONFIG_SERVER}
-  cloud:
-    config:
-      profile: ${ACTIVE_PROFILE}
+#  config:
+#    import: configserver:${URL_CONFIG_SERVER}
+#  cloud:
+#    config:
+#      profile: ${ACTIVE_PROFILE}
     gateway:
       actuator:
         verbose:
