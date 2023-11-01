@@ -44,7 +44,7 @@ eureka:
     fetch-register: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:5000}/eureka/
+      defaultZone: http://localhost:5000/eureka/
 
 # CONFIGURAÇÕES ACTUATOR
 management:
