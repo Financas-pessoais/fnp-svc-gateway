@@ -33,9 +33,9 @@ eureka:
   client:
     fetch-register: true
     register-with-eureka: true
-    defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
+    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
   serviceUrl:
-    defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
+    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
   instance:
   instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   prefer-ip-address: true
