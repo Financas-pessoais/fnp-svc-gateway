@@ -12,7 +12,6 @@ server:
 
 # CONFIGURAÇÕES GATEWAY
 spring:
-  profiles: heroku
   application:
     name: SVC-GATEWAY
 #  config:
