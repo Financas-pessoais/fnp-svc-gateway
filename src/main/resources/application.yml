@@ -41,6 +41,8 @@ spring:
 #  prefer-ip-address: true
 eureka:
   client:
+    fetch-register: true
+    register-with-eureka: true
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:5000}/eureka/
 
