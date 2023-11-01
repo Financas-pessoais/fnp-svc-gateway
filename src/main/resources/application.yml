@@ -12,6 +12,7 @@ server:
 
 # CONFIGURAÇÕES GATEWAY
 spring:
+  profiles: heroku
   application:
     name: SVC-GATEWAY
 #  config:
@@ -29,16 +30,20 @@ spring:
       enabled: true
 
 # CONFIGURAÇÕES EUREKA
+#eureka:
+#  client:
+#    fetch-register: true
+#    register-with-eureka: true
+#    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
+#  serviceUrl:
+#    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
+#  instance:
+#  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#  prefer-ip-address: true
 eureka:
   client:
-    fetch-register: true
-    register-with-eureka: true
-    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
-  serviceUrl:
-    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
-  instance:
-  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-  prefer-ip-address: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:5000}/eureka/
 
 # CONFIGURAÇÕES ACTUATOR
 management:
