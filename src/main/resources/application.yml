@@ -46,7 +46,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: https://admin:762@fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
+      defaultZone: https://<admin>:<762>@fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
 
 # CONFIGURAÇÕES ACTUATOR
 management:
