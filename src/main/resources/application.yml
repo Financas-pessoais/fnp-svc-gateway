@@ -28,17 +28,6 @@ spring:
     discovery:
       enabled: true
 
-# CONFIGURAÇÕES EUREKA
-#eureka:
-#  client:
-#    fetch-register: true
-#    register-with-eureka: true
-#    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
-#  serviceUrl:
-#    defaultZone: http://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka
-#  instance:
-#  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-#  prefer-ip-address: true
 eureka:
   client:
     fetch-register: true
@@ -46,7 +35,11 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: https://username:password@fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
+#      defaultZone: https://fnp-svc-discovery-server-8c7614af535c.herokuapp.com/eureka/
+      defaultZone: ${EUREKA_PROTOCOL}://${EUREKA_USERNAME}:${EUREKA_PASSWORD}@${EUREKA_URL}/eureka
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      prefer-ip-address: true
 
 # CONFIGURAÇÕES ACTUATOR
 management:
